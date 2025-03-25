@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Vibe Medellin</title>
+    <link rel="stylesheet" href="index_pruba.css">
+</head>
+<body>
+    <header class="fondo">
+        <div class="contenido-secundario" id="contenido-secundario" style="display: none; text-align: center;">
+            <img class="logo" src="Img/Logo-Urban-Vibe.png" alt="Img Urban Vibe" id="logo">
+        </div>
+        <div class="contenedor-titulo" id="contenedor">
+            <h2 class="titulo" id="titulo">Urban Vibe Medellin</h2>
+            <h5 class="subtitulo" id="subtitulo">"Donde la Moda y la Calle se Encuentran"</h5>
+        </div>
+    </header>
+    
+    <script>
+        window.onload = function() {
+            const contenedor = document.getElementById("contenedor");
+            const titulo = document.getElementById("titulo");
+            const subtitulo = document.getElementById("subtitulo");
+            const contenidoSecundario = document.getElementById("contenido-secundario");
+            const logo = document.getElementById("logo");
+            
+            setTimeout(() => {
+                contenedor.style.opacity = "1";
+                contenedor.style.transform = "scale(1)";
+            }, 500);
+            
+            setTimeout(() => {
+                titulo.style.opacity = "1";
+            }, 1500);
+            
+            setTimeout(() => {
+                subtitulo.style.opacity = "1";
+            }, 2500);
+            
+            setTimeout(() => {
+                contenedor.style.maxWidth = "45%";
+                contenedor.style.height = "auto";
+            }, 3500);
+            
+            setTimeout(() => {
+                contenidoSecundario.style.display = "block";
+                logo.style.opacity = "1";
+                logo.style.animation = "fadeInDown 1s ease-in-out forwards";
+            }, 4500);
+            
+            // Redirección automática después de 10 segundos
+            setTimeout(() => {
+                window.location.href = "inicio.html#inicio";
+            }, 10000);
+        };
+    </script>
+</body>
+</html>
