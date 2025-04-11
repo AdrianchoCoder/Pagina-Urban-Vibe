@@ -1,0 +1,64 @@
+<!DOCTYPE html> <!-- Declara el tipo de documento como HTML5 -->
+<html lang="es"> <!-- Inicio del documento HTML con el idioma configurado en español -->
+<head>
+    <meta charset="UTF-8"> <!-- Configuración de la codificación de caracteres para admitir caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajuste para hacer que la página sea responsiva -->
+    <title>Urban Vibe Medellin</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="index_pruba.css"> <!-- Enlace a la hoja de estilos externa -->
+    <style>
+        .contenedor-titulo {
+            transition: max-width 1s ease-in-out, max-height 1s ease-in-out; /* Transiciones suaves en los cambios de tamaño del contenedor */
+        }
+    </style>
+</head>
+<body>
+    <header class="fondo"> <!-- Encabezado de la página con una clase de fondo -->
+        <div class="contenido-secundario" id="contenido-secundario" style="display: none; text-align: center;"> <!-- Contenedor oculto inicialmente -->
+            <img class="logo" src="Img/Logo-Urban-Vibe.png" alt="Img Urban Vibe" id="logo"> <!-- Logo de la página -->
+        </div>
+        <div class="contenedor-titulo" id="contenedor"> <!-- Contenedor del título principal -->
+            <h2 class="titulo" id="titulo">Urban Vibe Medellin</h2> <!-- Título principal -->
+            <h5 class="subtitulo" id="subtitulo">"Donde la Moda y la Calle se Encuentran"</h5> <!-- Subtítulo -->
+        </div>
+    </header>
+    
+    <script>
+        window.onload = function() { /* Ejecuta la función cuando la página se carga completamente */
+            const contenedor = document.getElementById("contenedor"); /* Obtiene el elemento con ID "contenedor" */
+            const titulo = document.getElementById("titulo"); /* Obtiene el elemento con ID "titulo" */
+            const subtitulo = document.getElementById("subtitulo"); /* Obtiene el elemento con ID "subtitulo" */
+            const contenidoSecundario = document.getElementById("contenido-secundario"); /* Obtiene el elemento con ID "contenido-secundario" */
+            const logo = document.getElementById("logo"); /* Obtiene el elemento con ID "logo" */
+            
+            setTimeout(() => {
+                contenedor.style.opacity = "1"; /* Hace que el contenedor principal sea visible */
+                contenedor.style.transform = "scale(1)"; /* Escala el contenedor a su tamaño normal */
+            }, 500);
+            
+            setTimeout(() => {
+                titulo.style.opacity = "1"; /* Hace que el título principal aparezca gradualmente */
+            }, 1500);
+            
+            setTimeout(() => {
+                subtitulo.style.opacity = "1"; /* Hace que el subtítulo aparezca gradualmente */
+            }, 2500);
+            
+            setTimeout(() => {
+                contenedor.style.maxWidth = "45%"; /* Reduce el ancho máximo del contenedor */
+                contenedor.style.maxHeight = "50%"; /* Reduce la altura máxima del contenedor */
+            }, 1500);
+            
+            setTimeout(() => {
+                contenidoSecundario.style.display = "block"; /* Muestra el contenedor secundario con el logo */
+                logo.style.opacity = "1"; /* Hace que el logo sea visible */
+                logo.style.animation = "fadeInDown 1s ease-in-out forwards"; /* Aplica una animación de entrada al logo */
+            }, 4500);
+            
+            // Redirección automática después de 10 segundos
+            setTimeout(() => {
+                window.location.href = "inicio.html#inicio"; /* Redirige a la página de inicio */
+            }, 10000);
+        };
+    </script>
+</body>
+</html>
